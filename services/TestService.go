@@ -1,5 +1,7 @@
 package services
 
+import "go-server/repositories"
+
 //
 //var p = fmt.Println
 //
@@ -28,4 +30,10 @@ func RandString() (string){
 	// Pretend to return a random string
 	return "testetestestestetsetstes"
 	//return string(Services.Name)
+}
+
+func MemberSelect() (string){
+	repositories.Repo.Select()
+
+	return "memberselect"
 }

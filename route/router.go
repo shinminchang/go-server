@@ -18,5 +18,10 @@ func Route(){
 	{
 		member.GET("", controllers.News.News)
 	}
+
+	databases := router.Group("/api/v1/db")
+	{
+		databases.GET("", controllers.Dbtest.Test)
+	}
 	router.Run()
 }

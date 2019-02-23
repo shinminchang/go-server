@@ -31,6 +31,6 @@ func (self NewController) News(c *gin.Context){
 	//})
 	//c.JSON(200, services.Services.Test)
 	c.JSON(200, gin.H{
-		"message" : services.Services.Test(),
+		"message" : services.RandString(),
 	})
 }
