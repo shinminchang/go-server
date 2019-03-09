@@ -15,4 +15,5 @@ func (self DbContoller) Test(c *gin.Context){
 	c.JSON(200, gin.H{
 		"message" : services.MemberSelect(),
 	})
+	//services.MemberSelect()
 }

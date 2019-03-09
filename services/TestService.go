@@ -1,6 +1,9 @@
 package services
 
-import "go-server/repositories"
+import (
+	"go-server/model"
+	"go-server/repositories"
+)
 
 //
 //var p = fmt.Println
@@ -32,8 +35,10 @@ func RandString() (string){
 	//return string(Services.Name)
 }
 
-func MemberSelect() (string){
-	repositories.Repo.Select()
+func MemberSelect() []model.Member{
 
-	return "memberselect"
+
+	return repositories.Repo.Select()
+	//return "memberselect"
+	//return []model.Member
 }
